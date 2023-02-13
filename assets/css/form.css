@@ -98,7 +98,7 @@ form label{
     background-color: white;
 }
 
-#button {
+#button, #registerButton {
     background-color: #7c7ded;
     color: white;
     font-weight: 700;
@@ -107,7 +107,7 @@ form label{
     cursor: pointer;
 }
 
-#button:hover {
+#button:hover, #registerButton:hover {
     background-color: #4748a7;
 }
 

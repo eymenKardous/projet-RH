@@ -5,6 +5,15 @@ let crypto = require('../customDepedencies/crypto.js');
 const companyModel = require("../models/companies.js");
 const session = require('express-session')
 
+connexionRouter.get('/', async(req, res) =>{
+    try {
+        res.redirect('/connexion');
+
+    } catch (err) {
+        res.send(err)
+    }
+});
+
 connexionRouter.get('/connexion', async(req, res) =>{
     try {
         res.render('template/login.twig')
@@ -32,6 +41,8 @@ connexionRouter.post('/connected', async(req, res) =>{
         res.redirect('/register')
     }
 })
+
+
 
 connexionRouter.get('/disconnect', async(req,res)=>{
     try{

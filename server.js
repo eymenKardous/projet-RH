@@ -28,7 +28,7 @@ app.use(updateRouter)
 app.use(deleteRouter)
 app.use(addBlameRouter)
 
-app.listen(5326,(err)=>{
+app.listen(3001,(err)=>{
     if (err) {
        console.log(err); 
     }else{
