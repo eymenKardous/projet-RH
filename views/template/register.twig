@@ -1,0 +1,49 @@
+{% extends "base.twig" %}
+
+{% block style %}
+    <link rel="stylesheet" href="./css/form.css">
+{% endblock %}
+
+{% block header %}
+<img src="./img/logo.png" alt="logo">
+    <h1>Welc-Home</h1><hr>
+    <a href="/main">Retour à l'accueil</a>
+{% endblock %}
+
+{% block main %}
+ <div class="container">
+    <form action="/register" method="post" id="registerform">
+        <div>
+        <label for="name">Nom de la societé</label>
+        <input type="text" name="name" id="name">
+
+        </div>
+        <div>
+        <label for="siret">Numéro de SIRET</label>
+        <input type="text" name="siret" id="siret">
+        
+        </div>
+        <div>
+        <label for="mail">Adresse Mail</label>
+        <input type="email" name="mail" id="mail">
+        
+        </div>
+        <div>
+        <label for="boss">Nom du directeur</label>
+        <input type="text" name="boss" id="boss">
+        
+        </div>
+        <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        
+        </div>
+
+        <div>
+        <input type="submit" value="S'inscrire" id="button">
+        </div>
+    </form>
+ </div>
+{% endblock %}
+
+

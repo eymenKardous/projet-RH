@@ -1,0 +1,96 @@
+{% extends "base.twig" %}
+
+{% block style %}
+	<link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/popup.css">
+{% endblock %}
+
+{% block header %}
+	<div id="test">
+
+		<div id='top'>
+			<img id="openNavBurger" src="../img/burger.svg" alt="menu">
+			<div id="logo">
+				<img src="./img/logo.png" alt="logo">
+				<h1>Welc-Home</h1>
+			</div>
+
+		</div>
+
+		<div id="menu">Menu</div>
+		<nav id="navBurger">
+			<ul>
+				<div id="options">
+					<li>
+						<a href="/main"><img src="./img/home.png" alt="home">
+							Retour à l'accueil</a>
+					</li>
+					<li>
+						<a href="/add" id="addOne"><img src="./img/add.png" alt="add">
+							Ajouter un salarié</a>
+						<br>
+					</li>
+					<li>
+						<a href="/disconnect" id="disconnect"><img src="./img/deco.png" alt="deco">
+							Se déconnecter</a>
+					</li>
+				</div>
+			</ul>
+				<a><img src="../img/corbeille.png" alt="corbeille" id="trash" onDrop="return drop(event)" onDragOver="return over(event)">
+					<div>Glisser le salarié <br>à supprimer</div>
+				</a>
+		</nav>
+	</div>
+{% endblock %}
+
+{% block main %}
+
+	<div id="contain">
+		<div id="search">
+			<form method="get" action="/main">
+				<span>Rechercher un salarié</span>
+				<input type="search" name="search" id="searchBar">
+				<button type="submit" id="button">Rechercher</button>
+			</form>
+
+		<div id="user">
+		<div>Bienvenue à vous</div>
+		{{companyName | first}}
+		</div>
+
+		</div>
+
+		<div id="all">
+			{% for employee in employees %}
+				<div class="salarie" draggable="true" id="{{employee.id}}" onDragStart="start(event)">
+
+					<div id="names"  >
+						<div id="name">{{employee.name}}</div>
+						<div>{{employee.firstname}}</div>
+					</div>
+
+					<div id="job" >
+						<div>#{{employee.job}}</div>
+					</div>
+
+					<div id="photo" >
+						<img src="./img/employees/{{employee.photo}}" alt="photo" class="photo">
+					</div>
+
+					<div class="blame"  >
+						<div id="blames">{{employee.blame}}</div>
+						{# <a href="/addBlame/{{employee.id}}">Blâmer</a> #}
+						<button value={{employee.id}} class="blamePerson" >Blâmer le salarié</button>
+					</div>
+
+					<div id="acces" >
+						<a href="/update/{{employee.id}}">Modifier le salarié</a>
+					</div>
+
+				</div><hr>
+			{% endfor %}
+		</div>
+	</div>
+	
+<script src="./js/addBlame.js"></script>
+{% endblock %}

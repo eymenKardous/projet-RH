@@ -1,0 +1,33 @@
+{% extends "base.twig" %}
+
+{% block style %}
+    <link rel="stylesheet" href="./css/form.css">
+
+{% endblock %}
+
+{% block header %}
+    <img src="./img/logo.png" alt="logo">
+    <h1>Welc-Home</h1><hr>
+{% endblock %}
+
+{% block main %}
+<div class="container">
+ 
+<form action="/connected" method="post" id="connexionform">
+        <div>
+        <label for="mail">Email</label>
+        <input type="email" name="mail" id="mail">
+        </div>
+        <div>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password">
+        </div>
+        <div>
+        <input type="submit" value="Se connecter" id="button">
+        </div>
+        
+    </form>
+ </div>
+{% endblock %}
+
+

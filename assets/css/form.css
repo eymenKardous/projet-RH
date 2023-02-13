@@ -1,0 +1,126 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 17px;
+}
+
+header{
+    background-color: #101924;
+    color: white;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    font-size: 15px;
+    border-bottom: 1px solid white;
+}
+
+body{
+    background-color: #F5F6FA;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1vw;
+    line-height: 2vw;
+    color: #6576FF;
+}
+
+header button{
+    background-color: #101924;
+    color: #6576FF;
+    border: none;
+    font-size: 15px;
+    margin-top: 1vw;
+
+}
+
+header img{
+    height: 4vw;
+    width: 4vw;
+}
+
+/* main{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+} */
+
+a{
+    text-decoration: none;
+    color: #6576FF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    max-width: 500px;
+    flex: 1;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    flex-grow: 1;
+}
+
+#password{
+    margin-bottom: 1vw;
+}
+
+form input{
+    padding: 11px 16px;
+}
+
+form label{
+    text-align: left;
+}
+
+#photo{
+    border: 1px solid black;
+    background-color: white;
+}
+
+#button {
+    background-color: #7c7ded;
+    color: white;
+    font-weight: 700;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: #4748a7;
+}
+
+#disconnect{
+    color: #6576FF;
+    
+}
+
+#disconnect:hover{
+    color: rgb(230, 122, 122);
+    
+}
+
+.deleteEmployee:hover{
+color: rgb(255, 0, 0);
+}
